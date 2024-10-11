@@ -1,0 +1,258 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ice Cream Quiz</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/quiz.css' %}"> 
+    <style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        font-family: 'Arial', sans-serif;
+        background-color: beige;
+    }
+    .quiz-container {
+        width: 80%;
+        max-width: 900px;
+        margin-top: 5rem;
+        padding: 20px;
+        background-color: #83d5f6;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+    }
+    .quiz-slide {
+        display: none;
+        text-align: center;
+    }
+    h2 {
+        font-size: 26px;
+        margin-bottom: 20px;
+        font-weight: 600;
+        color: rgb(28, 25, 57);
+    }
+    .options {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 20px; /* Added gap for spacing */
+    }
+    .option {
+        cursor: pointer;
+        width: 22%; /* Adjusted width to fit 4 items in a row */
+        border: 2px solid transparent;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: 0.3s;
+        position: relative;
+    }
+    .option img {
+        width: 100%;
+        height: 150px; /* Adjust height */
+        object-fit: cover; /* Ensures the image fills the box without distortion */
+    }
+    p{
+        color: rgb(28, 25, 57);
+        font-size: 1.5rem;
+    }
+    .option:hover {
+        border: 2px solid rgb(28, 25, 57);
+    }
+
+    .navigation {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+    }
+
+    .circle {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background: #a4a1a1;
+        margin: 0 10px; /* Increased spacing */
+        cursor: pointer;
+        transition: 0.3s; /* Smooth transition */
+    }
+
+    .circle.active {
+        background: #1e90ff;
+    }
+
+    .submit-btn {
+        display: none;
+        background-color: #1e90ff;
+        color: white;
+        border: none;
+        padding: 12px 25px; /* Adjusted padding */
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 18px; /* Increased font size */
+        margin-top: 20px; /* Added margin for spacing */
+    }
+
+    .submit-btn:hover {
+        background-color: #4aa3ff;
+    }
+
+    </style>
+</head>
+<body>
+    {% include 'header.html' %}
+    <div class="quiz-container">
+        <form method="POST" action="{% url 'submit_quiz' %}" id="quiz-form">
+            {% csrf_token %}
+            
+            <!-- Question 1 -->
+            <div class="quiz-slide active">
+                <h2>What does a perfect day look like to you?</h2>
+                <div class="options">
+                    <div class="option" data-value="1">
+                        <img src="{% static 'images/1_1.png' %}" alt="An exciting adventure">
+                        <p>Finding joy in the richness of life</p>
+                    </div>
+                    <div class="option" data-value="2">
+                        <img src="{% static 'images/1_2.png' %}" alt="A delightful city experience">
+                        <p>Being silly with my loved ones</p>
+                    </div>
+                    <div class="option" data-value="3">
+                        <img src="{% static 'images/1_3.png' %}" alt="A gorgeous beach">
+                        <p>Quiet time by myself</p>
+                    </div>
+                    <div class="option" data-value="4">
+                        <img src="{% static 'images/1_4.png' %}" alt="A pastoral country village">
+                        <p>Get all my chores done, then have a sweet</p>
+                    </div>
+                </div>
+                <input type="hidden" name="q1" id="q1" required>
+            </div>
+            <div class="quiz-slide active">
+                <h2>Which vacation do you prefer?</h2>
+                <div class="options">
+                    <div class="option" data-value="1">
+                        <img src="{% static 'images/2_1.png' %}" alt="An exciting adventure">
+                        <p>An exciting adventure</p>
+                    </div>
+                    <div class="option" data-value="2">
+                        <img src="{% static 'images/2_2.png' %}" alt="A delightful city experience">
+                        <p>A delightful city experience</p>
+                    </div>
+                    <div class="option" data-value="3">
+                        <img src="{% static 'images/2_3.png' %}" alt="A gorgeous beach">
+                        <p>A gorgeous beach</p>
+                    </div>
+                    <div class="option" data-value="4">
+                        <img src="{% static 'images/2_4.png' %}" alt="A pastoral country village">
+                        <p>A pastoral country village</p>
+                    </div>
+                </div>
+                <input type="hidden" name="q2" id="q2" required>
+            </div>
+            <div class="quiz-slide active">
+                <h2>You have an hour of free time; how do you spend it?</h2>
+                <div class="options">
+                    <div class="option" data-value="1">
+                        <img src="{% static 'images/3_1.png' %}" alt="An exciting adventure">
+                        <p>Practicing my fresh dance moves</p>
+                    </div>
+                    <div class="option" data-value="2">
+                        <img src="{% static 'images/3_2.png' %}" alt="A delightful city experience">
+                        <p>Outside, experiencing nature</p>
+                    </div>
+                    <div class="option" data-value="3">
+                        <img src="{% static 'images/3_3.png' %}" alt="A gorgeous beach">
+                        <p>Making cookies for friends</p>
+                    </div>
+                    <div class="option" data-value="4">
+                        <img src="{% static 'images/3_4.png' %}" alt="A pastoral country village">
+                        <p>On my favorite hobby</p>
+                    </div>
+                </div>
+                <input type="hidden" name="q3" id="q3" required>
+            </div>
+            <div class="quiz-slide active">
+                <h2>What is your superpower?</h2>
+                <div class="options">
+                    <div class="option" data-value="1">
+                        <img src="{% static 'images/4_1.png' %}" alt="An exciting adventure">
+                        <p>My sentimental heart</p>
+                    </div>
+                    <div class="option" data-value="2">
+                        <img src="{% static 'images/4_2.png' %}" alt="A delightful city experience">
+                        <p>My creativity</p>
+                    </div>
+                    <div class="option" data-value="3">
+                        <img src="{% static 'images/4_3.png' %}" alt="A gorgeous beach">
+                        <p>Making cookies for friends</p>
+                    </div>
+                    <div class="option" data-value="4">
+                        <img src="{% static 'images/4_4.png' %}" alt="A pastoral country village">
+                        <p>On my favorite hobby</p>
+                    </div>
+                </div>
+                <input type="hidden" name="q4" id="q4" required>
+            </div>
+            <div class="quiz-slide active">
+                <h2>You have won the lottery! I think I'll...</h2>
+                <div class="options">
+                    <div class="option" data-value="1">
+                        <img src="{% static 'images/5_1.png' %}" alt="An exciting adventure">
+                        <p>Shout with glee</p>
+                    </div>
+                    <div class="option" data-value="2">
+                        <img src="{% static 'images/5_2.png' %}" alt="A delightful city experience">
+                        <p>Experience luxury</p>
+                    </div>
+                    <div class="option" data-value="3">
+                        <img src="{% static 'images/5_3.png' %}" alt="A gorgeous beach">
+                        <p>Share the bounty with my family</p>
+                    </div>
+                    <div class="option" data-value="4">
+                        <img src="{% static 'images/5_4.png' %}" alt="A pastoral country village">
+                        <p>Spread my investments out into little chunks</p>
+                    </div>
+                </div>
+                <input type="hidden" name="q5" id="q5" required>
+            </div>
+            <div class="quiz-slide active">
+                <h2>What is your favorite place in town?</h2>
+                <div class="options">
+                    <div class="option" data-value="1">
+                        <img src="{% static 'images/6_1.png' %}" alt="An exciting adventure">
+                        <p>The farmers market</p>
+                    </div>
+                    <div class="option" data-value="2">
+                        <img src="{% static 'images/6_2.png' %}" alt="A delightful city experience">
+                        <p>Chilling on my couch</p>
+                    </div>
+                    <div class="option" data-value="3">
+                        <img src="{% static 'images/6_3.png' %}" alt="A gorgeous beach">
+                        <p>The donut shop</p>
+                    </div>
+                    <div class="option" data-value="4">
+                        <img src="{% static 'images/6_4.png' %}" alt="A pastoral country village">
+                        <p>My favorite coffee shop</p>
+                    </div>
+                </div>
+                <input type="hidden" name="q6" id="q6" required>
+            </div>
+            <!-- Navigation Circles -->
+            <div class="navigation">
+                <div class="circle active" onclick="goToSlide(0)"></div>
+                <div class="circle" onclick="goToSlide(1)"></div>
+                <div class="circle" onclick="goToSlide(2)"></div>
+                <div class="circle" onclick="goToSlide(3)"></div>
+                <div class="circle" onclick="goToSlide(4)"></div>
+                <div class="circle" onclick="goToSlide(5)"></div>
+            </div>
+            
+            <button type="submit" class="submit-btn">Find My Ice Cream!</button>
+        </form>
+    </div>
+    <script src="{% static 'js/quiz.js' %}"></script>
+</body>
+</html>

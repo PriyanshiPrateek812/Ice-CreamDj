@@ -1,0 +1,41 @@
+{%load static%}
+<header class="header" id="header">
+    <nav class="fixed nav container">
+        <ul>
+            <li id="company-name"><a href="/">Priyanshi's Ice Cream Palour</a></li>
+            {% if user.is_authenticated %}
+                <li id="log-in" class="register">
+                    <button><a href="/profile/" id="log">Profile</a></button>
+                </li>
+                <li id="sign-up" class="register">
+                    <form method="POST" action="{% url 'logout' %}">
+                        {% csrf_token %}
+                        <button><a id="sign">Logout</a></button>
+                    </form>
+                </li>
+            {% else %}
+                <li id="log-in" class="register">
+                    <button><a href="/login/" id="log">Log In</a></button>
+                </li>
+                <li id="sign-up" class="register">
+                    <button><a href="/signup/" id="sign">Sign Up</a></button>
+                </li>
+            {% endif %}
+            
+        </ul>
+    </nav>
+    <nav class="float nav container">
+        <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+                <li><a href="/" class="nav__link">Home</a></li>
+                <li><a href="/menu/" class="nav__link">Menu</a></li>
+                <li><a href="{% url 'home' %}#about" class="nav__link">About Us</a></li>
+                <li><a href="{% url 'home' %}#contact" class="nav__link">Contact Us</a></li>
+                <!-- <li><input type="text" placeholder="Search.."></li> -->
+            </ul>
+            <div class="logo-container">
+                <img src="{% static 'images/IceCream-logo.png' %}" alt="Ice Cream Logo" class="logo">
+            </div>
+        </div>
+    </nav>
+</header>

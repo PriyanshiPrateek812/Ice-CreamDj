@@ -1,0 +1,59 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"> <!-- Your CSS file -->
+    <title>{{ name }}</title>
+    <style>
+        
+        #name{
+            font-size: 2.5rem;
+        }
+        #image{
+            width: 30rem;
+            height: auto;
+        }
+        #description{
+            margin-top:0.5rem;
+        }
+        .procedure{
+            font-size: 2rem;
+            margin-left:3rem;
+        }
+        #ingredients{
+            margin-left: 4rem;
+            margin-top: 0.5rem;
+            font-size: 1.2rem;
+        }
+        #steps{
+            margin-left: 4rem;
+            margin-top: 0.5rem;
+            margin-bottom: 3rem;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    {% include 'header.html' %}
+    <section class="home" id="home">
+        <div class="home-content">
+            <h2 class="home-heading" id="name">{{ name }}</h2>   
+            <p class="home-description" id="description">
+                {{ recipe.description }}
+            </p>
+            <h2 class="procedure">Ingredients</h2>
+        <ul>
+            {% for ingredient in recipe.ingredients %}
+                <li id="ingredients">{{ ingredient }}</li>
+            {% endfor %}
+        </ul>
+        
+        <h2 class="procedure">Instructions</h2>
+        <p id="steps">{{ recipe.instructions }}</p>
+        </div>          
+        <img src="{% static recipe.image %}" class="home-img" id="image">
+    </section>
+</body>
+</html>

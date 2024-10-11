@@ -1,0 +1,247 @@
+{
+    "Ice-cream": [
+        {
+            "name": "California Pistachio Ice Cream",
+            "price": "\u20b998",
+            "image": "/static/images/california-pistachio-ice-cream.jpeg"
+        },
+        {
+            "name": "Mississippi Mud Ice Cream",
+            "price": "\u20b9136",
+            "image": "/static/images/mississippi-mud-ice-cream.jpeg"
+        },
+        {
+            "name": "Snickers Ice Cream",
+            "price": "\u20b9142",
+            "image": "/static/images/snickers-ice-cream.jpeg"
+        },
+        {
+            "name": "Bavarian Chocolate Ice Cream",
+            "price": "\u20b9110",
+            "image": "/static/images/bavarian-chocolate-ice-cream.jpeg"
+        },
+        {
+            "name": "Belgian Bliss Ice Cream",
+            "price": "\u20b9138",
+            "image": "/static/images/belgian-bliss-ice-cream.jpeg"
+        },
+        {
+            "name": "Mint Milk Chocolate Chips Ice Cream",
+            "price": "\u20b9150",
+            "image": "/static/images/mint-milk-chocolate-chips-ice-cream.jpeg"
+        },
+        {
+            "name": "Gold Medal Ribbon Ice Cream",
+            "price": "\u20b9129",
+            "image": "/static/images/gold-medal-ribbon-ice-cream.jpeg"
+        },
+        {
+            "name": "Dutch Chocolate Ice Cream",
+            "price": "\u20b9115",
+            "image": "/static/images/dutch-chocolate-ice-cream.jpeg"
+        },
+        {
+            "name": "Three cheers chocolate Ice Cream",
+            "price": "\u20b9106",
+            "image": "/static/images/three-cheers-chocolate-ice-cream.jpeg"
+        },
+        {
+            "name": "Chocolate Mousse Royale Ice Cream",
+            "price": "\u20b9149",
+            "image": "/static/images/chocolate-mousse-royale-ice-cream.jpeg"
+        },
+        {
+            "name": "Chocolate Almond Praline Ice Cream",
+            "price": "\u20b9119",
+            "image": "/static/images/chocolate-almond-praline-ice-cream.jpeg"
+        },
+        {
+            "name": "Caramel Milk Cake Ice Cream",
+            "price": "\u20b992",
+            "image": "/static/images/caramel-milk-cake-ice-cream.jpeg"
+        },
+        {
+            "name": "Cotton Candy Ice Cream",
+            "price": "\u20b9130",
+            "image": "/static/images/cotton-candy-ice-cream.jpeg"
+        },
+        {
+            "name": "Jello Mello Ice Cream",
+            "price": "\u20b9103",
+            "image": "/static/images/jello-mello-ice-cream.jpeg"
+        },
+        {
+            "name": "Vanilla Ice Cream",
+            "price": "\u20b994",
+            "image": "/static/images/vanilla-ice-cream.jpeg"
+        },
+        {
+            "name": "Butterscotch Ribbon Ice Cream",
+            "price": "\u20b9131",
+            "image": "/static/images/butterscotch-ribbon-ice-cream.jpeg"
+        },
+        {
+            "name": "Honey Nut Crunch Ice Cream",
+            "price": "\u20b9120",
+            "image": "/static/images/honey-nut-crunch-ice-cream.jpeg"
+        },
+        {
+            "name": "Splish Splash Ice Cream",
+            "price": "\u20b9113",
+            "image": "/static/images/splish-splash-ice-cream.jpeg"
+        },
+        {
+            "name": "Hop Scotch Butterscotch Ice Cream",
+            "price": "\u20b998",
+            "image": "/static/images/hop-scotch-butterscotch-ice-cream.jpeg"
+        },
+        {
+            "name": "Roasted Californian Almond Ice Cream",
+            "price": "\u20b9101",
+            "image": "/static/images/roasted-californian-almond-ice-cream.jpeg"
+        },
+        {
+            "name": "Pralines 'N Cream Ice Cream",
+            "price": "\u20b9100",
+            "image": "/static/images/pralines-'n-cream-ice-cream.jpeg"
+        },
+        {
+            "name": "Roasted Coffee Creme Ice Cream",
+            "price": "\u20b9107",
+            "image": "/static/images/roasted-coffee-creme-ice-cream.jpeg"
+        },
+        {
+            "name": "Cookie Crumble 'N Cream",
+            "price": "\u20b9146",
+            "image": "/static/images/cookie-crumble-'n-cream.jpeg"
+        },
+        {
+            "name": "Fresh Alphonso Mango Ice Cream",
+            "price": "\u20b9125",
+            "image": "/static/images/fresh-alphonso-mango-ice-cream.jpeg"
+        },
+        {
+            "name": "Fresh Very Berry Strawberry Ice Cream",
+            "price": "\u20b9145",
+            "image": "/static/images/fresh-very-berry-strawberry-ice-cream.jpeg"
+        },
+        {
+            "name": "Black Currant Ice Cream",
+            "price": "\u20b9113",
+            "image": "/static/images/black-currant-ice-cream.jpeg"
+        },
+        {
+            "name": "Banana 'N Strawberries Ice Cream",
+            "price": "\u20b9136",
+            "image": "/static/images/banana-'n-strawberries-ice-cream.jpeg"
+        },
+        {
+            "name": "Fruit Overload Ice Cream",
+            "price": "\u20b9102",
+            "image": "/static/images/fruit-overload-ice-cream.jpeg"
+        },
+        {
+            "name": "Shooting Star Ice Cream",
+            "price": "\u20b9112",
+            "image": "/static/images/shooting-star-ice-cream.jpeg"
+        }
+    ],
+    "Sundaes": [
+        {
+            "name": "Alphonso Mango Fruit Cream Sundae",
+            "price": "\u20b9106",
+            "image": "/static/images/alphonso-mango-fruit-cream-sundae.jpeg"
+        },
+        {
+            "name": "Banana N Strawberry Fruit Cream Sundae",
+            "price": "\u20b9114",
+            "image": "/static/images/banana-n-strawberry-fruit-cream-sundae.jpeg"
+        },
+        {
+            "name": "Vanilla Fruit Cream Sundae",
+            "price": "\u20b9242",
+            "image": "/static/images/vanilla-fruit-cream-sundae.jpeg"
+        },
+        {
+            "name": "Snickers Caramel Sundae",
+            "price": "\u20b9170",
+            "image": "/static/images/snickers-caramel-sundae.jpeg"
+        },
+        {
+            "name": "Banana Royale",
+            "price": "\u20b9104",
+            "image": "/static/images/banana-royale.jpeg"
+        },
+        {
+            "name": "Thunder Hot Fudge",
+            "price": "\u20b9197",
+            "image": "/static/images/thunder-hot-fudge.jpeg"
+        }
+    ],
+    "Ice-cream Cakes": [
+        {
+            "name": "Vanilla Affair",
+            "price": "\u20b9368",
+            "image": "/static/images/vanilla-affair.jpeg"
+        },
+        {
+            "name": "Chocolate Cheer",
+            "price": "\u20b9451",
+            "image": "/static/images/chocolate-cheer.jpeg"
+        },
+        {
+            "name": "Belgian Dream",
+            "price": "\u20b9390",
+            "image": "/static/images/belgian-dream.jpeg"
+        },
+        {
+            "name": "Bavarian Blast",
+            "price": "\u20b9483",
+            "image": "/static/images/bavarian-blast.jpeg"
+        },
+        {
+            "name": "Nutella Slab",
+            "price": "\u20b9318",
+            "image": "/static/images/nutella-slab.jpeg"
+        }
+    ],
+    "Shakes": [
+        {
+            "name": "Cotton Candy Milkshake",
+            "price": "\u20b9271",
+            "image": "/static/images/cotton-candy-milkshake.jpeg"
+        },
+        {
+            "name": "Bavarian Chocolate Milkshake",
+            "price": "\u20b9288",
+            "image": "/static/images/bavarian-chocolate-milkshake.jpeg"
+        },
+        {
+            "name": "Fresh Alphonso Mango Milkshake",
+            "price": "\u20b9218",
+            "image": "/static/images/fresh-alphonso-mango-milkshake.jpeg"
+        },
+        {
+            "name": "Honey Nut Crunch Milkshake",
+            "price": "\u20b9230",
+            "image": "/static/images/honey-nut-crunch-milkshake.jpeg"
+        },
+        {
+            "name": "Mint Milk Chocolate Chips Milkshake",
+            "price": "\u20b9185",
+            "image": "/static/images/mint-milk-chocolate-chips-milkshake.jpeg"
+        }
+    ],
+    "Brownie Swizzlers": [
+        {
+            "name": "Choco Lava",
+            "price": "\u20b9181",
+            "image": "/static/images/choco-lava.jpeg"
+        },
+        {
+            "name": " Vanilla Brownie",
+            "price": "\u20b9167",
+            "image": "/static/images/vanilla-brownie.jpeg"
+        }
+    ]
+}

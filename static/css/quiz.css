@@ -1,0 +1,107 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: beige;
+}
+
+.quiz-container {
+    width: 80%;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    background-color: #83d5f6;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.quiz-slide {
+    display: none;
+    text-align: center;
+}
+
+.quiz-slide.active {
+    display: block;
+}
+
+h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: rgb(28, 25, 57);
+}
+
+.options {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px; /* Added gap for spacing */
+}
+
+.option {
+    cursor: pointer;
+    width: 22%; /* Adjusted width to fit 4 items in a row */
+    border: 2px solid transparent;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s;
+    position: relative;
+}
+
+.option img {
+    width: 100%;
+    height: 150px; /* Adjust height */
+    object-fit: cover; /* Ensures the image fills the box without distortion */
+}
+
+.option span {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color:rgb(28, 25, 57);
+    width: 100%;
+    padding: 15px 10px;
+    text-align: center;
+    font-size: 14px; /* Adjusted font size */
+    font-weight: 500; /* Added weight for better readability */
+}
+
+.option:hover {
+    border: 2px solid rgb(28, 25, 57);
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.circle {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #817e7e;
+    margin: 0 10px; /* Increased spacing */
+    cursor: pointer;
+    transition: 0.3s; /* Smooth transition */
+}
+
+.circle.active {
+    background: #1e90ff;
+}
+
+.submit-btn {
+    display: none;
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    padding: 12px 25px; /* Adjusted padding */
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px; /* Increased font size */
+    margin-top: 20px; /* Added margin for spacing */
+}
+
+.submit-btn:hover {
+    background-color: #4aa3ff;
+}

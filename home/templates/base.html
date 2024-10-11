@@ -1,0 +1,147 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Priyanshi's Ice Cream Palour</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    {% include 'header.html' %}
+    <section class="home" id="home">
+        <div class="home-content">
+            <h2 class="home-heading">Perfect for monsoon</h2>   
+            <p class="home-description">
+                Litchi tastes like monsoons—a grape with a hint of rose or maybe a pear. Either way, it’s juicy and refreshing.
+            </p>
+            <button class="home-btn"><a href="/menu/">Try it Out!</a></button>
+        </div>          
+        <img src="{% static 'images/litchi-cherry.jpg' %}" class="home-img">
+        
+       
+    </section>
+    <section class="quiz">
+        <div class="quiz-content">
+<h2>Find your new favourite flavour.</h2>
+        <p>Take the quiz to see which flavour you're feeling. Just six questions stand between you and bliss.</p>
+        <button><a href="/quiz/">Take the quiz<i class="fa-solid fa-arrow-right"></i></a></button>
+        </div>
+        
+        <img src="{% static 'images/final.png' %}">
+    </section>
+    <section class="serves">
+        <div class="serves-container">
+            <h2 class="serves-heading">Our Best Serves</h2>
+            <div class="scroll-container">
+                <div class="scroll-content scrollmenu">
+                    <a href="#cake">Ice Cream Cakes</a>
+                    <a href="#shakes">Shakes</a></button>
+                    <a href="#sundaes">Sundaes</a>
+                    <a href="#sandwiches">Ice Cream Sandwiches</a>
+                    <a href="#swizzler">Brownie Swizzlers</a>
+                    <a href="#smoothies">Smoothies</a>
+                    <a href="#roll">Ice Cream Rolls</a>
+                    <a href="#coffee">Cold Coffees</a>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="container swiper">
+                <div class="slider-wrapper">
+                    <div class="card-list swiper-wrapper">
+                        <div class="card-item swiper-slide">
+                            <div class="img-container">
+                                <img src="{% static 'images/blueberry.jpg' %}" alt="roll image" class="card-img">
+                            </div>
+                            <h3 class="user-name">Vanilla Berry Cone</h3>
+                            <p class="user-profession">Indulge in the Vanilla Berry Temptation Cone! It’s a perfect blend of creamy, crunchy, and tart flavors, making it an irresistible treat! 🍦🍫🍓</p>
+                            <a href="{% url 'recipe_view' 'Vanilla Berry Cone' %}">View Recipe<i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                        <div class="card-item swiper-slide">
+                            <div class="img-container">
+                                <img src="{% static 'images/icecreamShake.jpg' %}" alt="" class="card-img">
+                            </div>
+                            <h3 class="user-name">Strawberry Dream Delight</h3>
+                            <p class="user-profession">
+                                Indulge in the Strawberry Dream Delight! A perfect blend of sweetness and freshness. Sip through the striped straw and enjoy a taste of pure bliss! 🍓
+                            </p>
+                            <a href="{% url 'recipe_view' 'Strawberry Dream Delight' %}">View Recipe<i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                        <div class="card-item swiper-slide">
+                            <div class="img-container">
+                                <img src="{% static 'images/roll1.jpg' %}" alt="" class="card-img">
+                            </div>                
+                            <h3 class="user-name">Strawberry Bliss Rolls</h3>
+                            <p class="user-profession"> These vibrant pink ice cream rolls are made with high quality strawberry and made with the milk of your choice. Perfect for satisfying your dessert cravings! 🍓🍦</p>
+                            <a href="{% url 'recipe_view' 'Strawberry Bliss Rolls' %}" >View Recipe<i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                        <div class="card-item swiper-slide">
+                            <div class="img-container">
+                                <img src="{% static 'images/iceCake.jpg' %}" alt="" class="card-img" style="height: 190px;">
+                            </div>                
+                            <h3 class="user-name">Melting Ice Cream Cake</h3>
+                            <p class="user-profession"> The cake is the upside-down ice cream cone on top, dipped in chocolate, creating the playful illusion of a melting ice cream cone brings fun to any event. 🍰🍦</p>
+                            <a href="{% url 'recipe_view' 'Melting Ice Cream Cake' %}" >View Recipe<i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                        <div class="card-item swiper-slide">
+                            <div class="img-container">
+                                <img src="{% static 'images/sizzler.jpg' %}" alt="" class="card-img" style="height: 190px;">
+                            </div>                
+                            <h3 class="user-name">Chocolate Brownie Sizzler</h3>
+                            <p class="user-profession">The dessert consists of a brownie topped with a scoop of vanilla ice cream, which is melting due to the heat. There is steam rising from the hot plate.🍨🍫 </p>
+                            <a href="{% url 'recipe_view' 'Chocolate Brownie Sizzler' %}" >View Recipe<i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                        <div class="card-item swiper-slide">
+                            <div class="img-container">
+                                <img src="{% static 'images/sundae.jpg' %}" alt="" class="card-img" style="height: 190px;">
+                            </div>                
+                            <h3 class="user-name">Cherry-Berry Sundae</h3>
+                            <p class="user-profession"> The sundae is served in a clear glass cup, showcasing its vibrant layers. It features vanilla ice cream topped with whipped cream and a cherry. 🍨</p>
+                            <a href="{% url 'recipe_view' 'Cherry-Berry Sundae' %}" >View Recipe<i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-slide-button swiper-button-prev"></div>
+                    <div class="swiper-slide-button swiper-button-next"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="menu-btn">
+            <button><a href="" >View Menu</a></button>
+        </div>
+        
+    </section>
+    <section class="toppicks" id="toppicks">
+        <div class="toppicks-content">
+            <h2 class="toppicks-heading">So much to love. So little time. Grab your favourite now.</h2>
+            <p class="toppicks-subheading">Check out all your favourites, in one place.</p>
+            <button class="toppicks-btn"><a href="">See all <i class="fa-solid fa-arrow-right"></i></a></button>
+        </div>
+        <img id="rotation" src="{% static 'images/many.png' %}">
+    </section>
+    <section class="about" id="about">
+        <div class="translucent-box">
+            <h2 class="about-heading">About Us</h2>
+            <p class="about-description">Welcome to Priyanshi’s Ice Cream Palour, where every scoop is a delightful journey of flavors! Our passion for crafting the finest ice cream is matched only by our commitment to using the freshest, highest-quality ingredients. From classic favorites to innovative new creations, we offer a wide variety of flavors that cater to every taste bud. Whether you’re in the mood for a rich, creamy indulgence or a refreshing fruity treat, we have something special just for you. Here, we believe that ice cream is more than just a dessert—it’s a moment of joy, a memory in the making, and a sweet escape from the everyday. Come visit us and experience the magic of our handcrafted ice cream!
+            </p>
+        </div>
+        
+    </section>
+    <section class="contact" id="contact">
+        <div class="contact-box">
+            <h2 class="contact-heading">Reach Out to us: </h2>
+            <p>Share your favourite ice cream stories with us on instagram. Mention us in your stories and get a chance to win your favourite scoop of ice cream free with your next order!</p>
+            
+            <a href="https://www.instagram.com" target="_blank" class="contact__social-link"><i class="fa-brands fa-instagram"></i>Instagram
+            </a>
+        </div>        
+    </section>
+    <!-- linking Swipper JS Script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!--linking custom script -->
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

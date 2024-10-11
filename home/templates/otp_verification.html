@@ -1,0 +1,32 @@
+<!-- otp_verification.html -->
+ {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify OTP - Ice Cream Delight</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/otp_verify.css' %}">
+</head>
+<body>
+    <div class="otp-container">
+        <h2>Verify Your Email</h2>
+
+        <form method="POST" action="{% url 'verify_otp' %}">
+            {% csrf_token %}
+            <label for="otp"><i class="fa-solid fa-lock"></i> Enter OTP:</label>
+            <input type="text" id="otp" name="otp" required>
+            <button type="submit">Verify OTP</button>
+        </form>
+
+        {% if messages %}
+            <div class="messages">
+                {% for message in messages %}
+                    <p>{{ message }}</p>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
